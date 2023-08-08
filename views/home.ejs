@@ -1,0 +1,40 @@
+<%- include("partials/header") %>
+<main class="home-content">
+  <section>
+    <h2>Online Journaling Made Easy</h2>
+    <p>
+      Do you want to keep track of your daily thoughts and feelings but find it
+      hard to carry a physical journal around with you? Look no further than
+      Write Way. Our easy-to-use platform allows you to write your daily journal
+      from anywhere, at any time, with just a few clicks.
+    </p>
+  </section>
+  <section>
+    <h2>Features</h2>
+    <ul>
+      <li>Online journaling</li>
+      <li>User-friendly interface</li>
+      <li>Unlimited storage</li>
+      <li>Writing prompts and exercises</li>
+      <li>Community of fellow writers</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Sign Up Today</h2>
+    <p>
+      Join the Write Way community and start your writing journey today. Sign up
+      for a free account and start writing your daily journal online.
+    </p>
+    <a href="#">Sign Up Now</a>
+  </section>
+  <hr />
+  <h1 class="recent-posts">Recent posts</h1>
+  <hr />
+</main>
+<%posts.forEach(post=> {%>
+<h1><%=post.postTitle %></h1>
+<p>
+  <%=post.postBody.substring(0,100) + "...." %>
+  <a class="rdMore" href="posts/<%=post._id %> ">Read more</a>
+</p>
+<%}); %> <%- include("partials/footer") %>

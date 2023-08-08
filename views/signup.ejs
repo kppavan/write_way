@@ -1,0 +1,31 @@
+<%- include("partials/head") %> 
+  <body>
+    <div class="signup-container">
+      <h1 class="signup-h1">Create a new account</h1>
+      <form class="signup-frm" action="/signup" method="post">
+        <input
+          type="text"
+          placeholder="Name"
+          required
+          class="signup-inp"
+          name="name"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          required
+          class="signup-inp"
+          name="password"
+        />
+        <button type="submit" class="signup-btn">Sign Up</button>
+        <div class="login">
+          <p>Already have an account? <a href="/login">Log In</a></p>
+        </div>
+      </form>
+      <button class="back-btn" onclick="window.location.href='/'">
+        Back to Home
+      </button>
+      <%- include("partials/footer") %>
+    </div>
+  </body>
+</html>
